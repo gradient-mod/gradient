@@ -1,6 +1,6 @@
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
-package gradientmod.gradient;
+package gradientmod.gradient.core;
 
 import mcp.MethodsReturnNonnullByDefault;
 
