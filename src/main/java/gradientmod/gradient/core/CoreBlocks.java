@@ -1,5 +1,6 @@
 package gradientmod.gradient.core;
 
+import gradientmod.gradient.core.blocks.PebbleBlock;
 import gradientmod.gradient.core.utils.RegistryHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -16,6 +17,7 @@ public final class CoreBlocks {
   private CoreBlocks() { }
 
   public static final Block SALT_BLOCK = null;
+  public static final PebbleBlock PEBBLE = null;
 
   @SubscribeEvent
   public static void registerBlocks(final RegistryEvent.Register<Block> event) {
@@ -24,5 +26,6 @@ public final class CoreBlocks {
     final RegistryHelper<Block> registry = new RegistryHelper<>(event.getRegistry());
 
     registry.register(new Block(Block.Properties.create(Material.SAND, MaterialColor.QUARTZ).hardnessAndResistance(0.5f).sound(SoundType.SAND)), CoreIds.SALT_BLOCK);
+    registry.register(new PebbleBlock(), CoreIds.PEBBLE);
   }
 }

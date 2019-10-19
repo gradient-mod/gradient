@@ -5,4 +5,5 @@ public final class CoreIds {
 
   public static final String SALT_BLOCK = "salt_block";
   public static final String SALT = "salt";
+  public static final String PEBBLE = "pebble";
 }
