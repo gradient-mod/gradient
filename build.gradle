@@ -94,6 +94,15 @@ minecraft {
 
 repositories {
   maven {
+    name = "GitHub gradient-mod"
+    url = "https://maven.pkg.github.com/gradient-mod/progression"
+    credentials {
+      username = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
+      password = project.findProperty("gpr.key") ?: System.getenv("GPR_API_KEY")
+    }
+  }
+
+  maven {
     // JEI
     name = "Progwml6 maven"
     url = "https://dvs1.progwml6.com/files/maven/"
@@ -110,6 +119,8 @@ dependencies {
   compileOnly fg.deobf("mezz.jei:jei-1.14.4:6.0.0.18:api")
   // at runtime, use the full JEI jar
   runtimeOnly fg.deobf("mezz.jei:jei-1.14.4:6.0.0.18")
+
+  compile fg.deobf("gradient-mod:progression:1.14.4-0.1.0-9")
 
   // You may put jars on which you depend on in ./libs or you may define them like so..
   // compile "some.group:artifact:version:classifier"
